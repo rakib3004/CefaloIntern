@@ -44,7 +44,7 @@ body{
     transform-style: preserve-3d;
 }
 
-.box div .block span
+.box div.block span
 {
 position:absolute;
 left: calc(50% - 100px);
@@ -53,5 +53,13 @@ height: 100px;
 background: #444;
 transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
 transition:  0.5s;
+
+}
+
+.box:hover div.block span
+{
+background: #f00;
+
+filter:  drop-shadow(0 0 50px #f00);
 
 }
