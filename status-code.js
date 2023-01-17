@@ -9,12 +9,14 @@ const app = express();
 
 app.get('/admin', (req,res)=>{
 
+    //res.send("<h1>Welcome to Admin Pannel<h1/> </br> <h2>Rational Stories<h2/>");
 
-
-    res.send("<h1>Welcome to Admin Pannel<h1/> </br> <h2>Rational Stories<h2/>");
+    res.writeHead(475, {'Content-Type': 'text/rakibium-text'});
+    res.write("hello");
+    res.end();
 });
 
-const PORT = 3000;
+const PORT = 2023;
 
 
 app.listen(PORT, ()=>{
