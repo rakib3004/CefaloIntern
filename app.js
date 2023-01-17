@@ -1,28 +1,42 @@
 const { json } = require("express");
 const express = require("express");
+const errorHandler = require("./middleware/error-handler");
+const { tryCatch } = require("./utils/try-catch");
 
 const app = express();
 
-app.get("\test", async (req,res,next)=>{
+app.get("\login",  (req,res)=>{
 
     try{
-    const user = getUser();
+    const user = "admin";
     if(!user){
         throw new Error("User Not Found");
     }
+    else{
+        res.send(user);
+    }
 }
     catch(error){
-            next(error)
-         
+         console.log(error)
     }
-
-
     return res.status.apply(200).json({success: true});
 
 });
 
-app.listen(4000, ()=>{
+app.get("\test", tryCatch(async (req,res,next)=>{
 
-    console.log("Server listening on port 4000");
-    
+    const user = getUser();
+    if(!user){
+        throw new Error("User Not Found");
+    }
+    return res.status.apply(200).json({success: true});
+})
+);
+
+app.use(errorHandler)
+
+app.listen(7070, ()=>{
+
+    console.log("Server listening on port 7000");
+
 })
