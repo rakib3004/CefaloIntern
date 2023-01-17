@@ -11,12 +11,12 @@ app.get('/admin', (req,res)=>{
 
     //res.send("<h1>Welcome to Admin Pannel<h1/> </br> <h2>Rational Stories<h2/>");
 
-    res.writeHead(475, {'Content-Type': 'text/rakibium-text'});
-    res.write("hello");
+    res.writeHead(222, {'Content-Type': 'text/html', 'Transfer-Encoding': 'embeded '});
+    res.write("<h1>Welcome to Admin Pannel<h1/> </br> <h2>Rational Stories<h2/>");
     res.end();
 });
 
-const PORT = 2023;
+const PORT = 8080;
 
 
 app.listen(PORT, ()=>{
