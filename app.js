@@ -3,7 +3,7 @@ const express = require("express");
 
 const app = express();
 
-app.get("\test", async(req,res)=>{
+app.get("\test", async (req,res,next)=>{
 
     try{
     const user = getUser();
@@ -12,9 +12,7 @@ app.get("\test", async(req,res)=>{
     }
 }
     catch(error){
-            console.log(error);
-
-        return res.status(400).send(error.message); 
+            next(error)
          
     }
 
