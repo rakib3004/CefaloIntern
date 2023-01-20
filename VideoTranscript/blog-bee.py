@@ -28,7 +28,6 @@ for video_id in video_group:
     language = "BlogText/Document"+str(lanID)+".txt"
     lanID = lanID+1
     file = open(language, "w")
-    print(dir(yta))
     file.write(transcript)
 
     file.close()
