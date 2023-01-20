@@ -1,4 +1,6 @@
 from youtube_transcript_api import YouTubeTranscriptApi as yta
+from translate import Translator
+translator= Translator(to_lang="Bangla") 
 
 import re
 
@@ -23,8 +25,10 @@ for video_id in video_group:
 
     transcript=transcript.strip()
 
-    language = "BlogText/Language"+str(lanID)+".txt"
+    language = "BlogText/Bangla"+str(lanID)+".txt"
     lanID = lanID+1
     file = open(language, "w")
+    transcript = translator.translate(transcript)
     file.write(transcript)
+
     file.close()
