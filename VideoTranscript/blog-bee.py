@@ -25,10 +25,10 @@ for video_id in video_group:
 
     transcript=transcript.strip()
 
-    language = "BlogText/Bangla"+str(lanID)+".txt"
+    language = "BlogText/Document"+str(lanID)+".txt"
     lanID = lanID+1
     file = open(language, "w")
-    transcript = translator.translate(transcript)
+    print(dir(yta))
     file.write(transcript)
 
     file.close()
