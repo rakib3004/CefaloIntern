@@ -15,6 +15,14 @@
         this.internSalary = salary;
       }
 
+    function Project(){
+        this.startDate="27 December 2022";
+        this.startDate="12 February 2023";
+        this.teamSize=17;
+        this.budget=5000000;
+        this.clientCountry="Spain";
+    }
+
       const rakib = new Student(1129, "Md. Rakib Trofder", "Cefalo", 15000);
       const siam = new Student(1104, "Md. Siam", "Stream Tech", 10000);
       const jafar = new Student(1109, "Jafar Mahin", "Orion", 20000);
@@ -39,7 +47,13 @@
       document.getElementById("sensetive-information").innerHTML =
         rakib.department;
 
-      document.getElementById("public-data").innerHTML = rakib.department;
+      document.getElementById("public-data").innerHTML = new Date();
+
+      const initProject = new Project();
+
+      console.log(initProject)
+
+
     </script>
   </body>
 </html>
