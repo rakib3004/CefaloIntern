@@ -16,3 +16,4 @@ const kazi = new Student(1111,"Kazi Muktadir Ahmed", "Brain Station 23",10000);
 const galib = new Student(1130,"Mushfiqur Galib", "Kaz Software",10000);
 const mushfiq = new Student(1110,"Mushfiqur Rahman Chowdhury", "Samsung",25000);
 
+console.table([{name:'rakib', company:'cefalo'},{name:'inzamam', company:'samsung'},{name:'kazi', company:'brain-station-23'},{name:'galib', company:'kaz-software'},{name:'jafar', company:'orion'}]);
