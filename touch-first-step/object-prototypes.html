@@ -40,6 +40,9 @@
         25000
       );
 
+      Project.prototype.standard="High";
+
+
       Student.prototype.department = "IIT-DU";
 
       document.getElementById("intern").innerHTML = rakib.companyName;
@@ -47,9 +50,13 @@
       document.getElementById("sensetive-information").innerHTML =
         rakib.department;
 
-      document.getElementById("public-data").innerHTML = new Date();
+        const initProject = new Project()
+        
+      document.getElementById("public-data").innerHTML = initProject;
 
-      const initProject = new Project();
+     ;
+
+
 
       console.log(initProject)
 
