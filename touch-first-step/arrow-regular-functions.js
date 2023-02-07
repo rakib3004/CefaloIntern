@@ -1,5 +1,3 @@
-"use strict"
-x,y=4;
 
 function greet(who){
     return `Hello, ${who}`;
