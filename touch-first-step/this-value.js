@@ -6,11 +6,13 @@ function myFunction(){
 }
 myFunction();
 
-function myObject = {
+const myObject = {
 
     findFullLanguageName(){
         console.table([{'language':'C Programming', 'extension':'.c'},{'language':'Java', 'extension':'.java'},{'language':'Python', 'extension':'.py'},{'language':'Javascript', 'extension':'.js'},{'language':'C Sharp', 'extension':'.cs'} ])
-        console.log(this)
+        console.log(this);
     }
 
 }
+
+myObject.findFullLanguageName();
