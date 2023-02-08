@@ -32,3 +32,20 @@ function myMethod(){
 }
 
 console.log(myMethod());
+
+const array = ["to-do", "docs", "notes"];
+
+console.log(array);
+
+array.push("slides","maps");
+
+console.log(array);
+
+array.reverse();
+
+console.log(array);
+
+array.splice(0,array.length-2);
+console.log(array);
+
+
