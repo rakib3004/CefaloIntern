@@ -17,3 +17,20 @@ console.log(details_info);
 
 
 
+const student = {
+    roll:"bsse1104",
+    positiion: "1st",
+    fullName: function () {
+      return this.roll + " is " + this.positiion;
+    }
+  }
+  
+  const user = {
+    roll:"bsse1129",
+    positiion: "5th",
+  }
+  
+  let result = student.fullName.bind(user);
+
+  console.log(result());
+
