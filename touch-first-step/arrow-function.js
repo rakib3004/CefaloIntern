@@ -19,3 +19,17 @@ var z = (x,y) =>{
 }
 
 
+var duration = (start,finish) => finish-start;
+
+console.log(duration(12,44));
+
+
+
+const five =5;
+
+console.log(five);
+
+//five = 6;
+// unable to redeclear any const
+
+console.log(five);
