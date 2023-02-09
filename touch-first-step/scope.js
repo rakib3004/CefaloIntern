@@ -32,8 +32,8 @@ let marksOnDockerProject = 65;
 }
 
 
-//console.log(totalNumberOfStudentAbove55InDS);
-// not allowed var outside of the block scope
+console.log(totalNumberOfStudentAbove55InDS);
+//  allowed var outside of the block scope
 
 
 
@@ -53,19 +53,25 @@ const totalMarksInDistributedSystemLab=70;
 
 // function scope
 
-function primaryFunction(){
+(function primaryFunction(){
  var primary = "department.primary";
-}
+ console.log(primary);
+
+ 
+})();
 
 //console.log(primary);
 // not allowed var outside of the function scope
 
 
 
-function secondaryFunction(){
+(function secondaryFunction(){
     const secondary = "department.secondary";
+    console.log(secondary);
 
-}
+    
+
+})();
 
 //console.log(secondary);
 // not allowed const outside of the function scope
@@ -73,9 +79,12 @@ function secondaryFunction(){
 
 
 
-function trinaryFunction(){
+(function trinaryFunction(){
     let trinary = "department.trinary";
-}
+    console.log(trinary);
+
+    
+})();
 
 //console.log(trinary);
 // not allowed let outside of the function scope
