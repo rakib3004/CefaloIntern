@@ -1,7 +1,7 @@
 // global scope
 
 let expectedCGPA = 3.85;
-let currentCGPA = 3.65;
+var currentCGPA = 3.65;
 const highestCGPA = 4.00;
 
 console.log(expectedCGPA);
@@ -88,7 +88,4 @@ const totalMarksInDistributedSystemLab=70;
 
 //console.log(trinary);
 // not allowed let outside of the function scope
-
-
-
 
