@@ -16,7 +16,9 @@ const meeting = new Promise((resolve, reject) => {
 
 const addToCalendar = (meetingDetails) => {
         const calendar = `${meetingDetails.name} has been on ${meetingDetails.location} at ${meetingDetails.time}`;
-      return Promise.resolve(calendar); 
+        const details = JSON.stringify(meetingDetails);
+        const obj = [calendar,details];
+      return Promise.resolve(obj); 
 }
 
 
