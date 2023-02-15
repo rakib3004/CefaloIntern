@@ -1,7 +1,6 @@
 const processOrder = (customer) => {
   console.log(`Processing order for ${customer}`);
-  var currentTime = new Date().getTime();
-  while (currentTime + 3000 >= new Date().getTime());
+  setTimeout(() => {}, 3000);
   console.log("Order process for ${customer}");
 };
 
