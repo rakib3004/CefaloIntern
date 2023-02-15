@@ -12,3 +12,30 @@ const meeting = new Promise((resolve, reject) => {
     reject(new Error("Meeting already scheduled!"));
   }
 });
+
+/*
+const addToCalendar = (meetingDetails) => {
+    return new Promise((resolve,reject)=>{
+        const calendar = `${meetingDetails.name} has been on ${meetingDetails.location} at ${meetingDetails.time}`;
+        resolve(calendar);
+    })
+}
+*/
+
+const addToCalendar = (meetingDetails) => {
+        const calendar = `${meetingDetails.name} has been on ${meetingDetails.location} at ${meetingDetails.time}`;
+      return Promise.resolve(calendar); 
+}
+
+
+
+meeting
+.then(addToCalendar)
+.then((res)=>{
+    console.log(res);
+})
+.catch((err)=>{
+    console.log(err)
+})
+
+
