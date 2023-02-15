@@ -22,5 +22,7 @@ const completeOrder = (customer) =>{
 takeOrder("Customer 1", (customer)=>{
     processOrder(customer, (customer)=>{
         completeOrder(customer);
-    })
-})
+    });
+});
+
+console.log(`Hello`);
