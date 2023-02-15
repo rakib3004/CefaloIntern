@@ -1,6 +1,8 @@
 const processOrder = (customer) => {
   console.log(`Processing order for ${customer}`);
-  setTimeout(() => {}, 3000);
+  setTimeout(() => {
+    console.log(`Cooking Completed`)
+  }, 3000);
   console.log("Order process for ${customer}");
 };
 
